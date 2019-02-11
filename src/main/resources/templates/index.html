@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="currency.js"></script>
+
+</head>
+<body>
+
+<h1>Currency rate</h1>
+<!--/*@thymesVar id="currencies" type="pl"*/-->
+<div th:each="currency: ${currencies}">
+    <p th:id="'currency-'+${currency}"></p>
+    <p th:id="'exchange-rate-'+${currency}"></p>
+</div>
+
+</body>
+</html>
