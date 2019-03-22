@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Currency last 7 days</title>
-
 </head>
 <h1>Currency last 7 days</h1>
 <body>
-
     <div th:if="${usdLastWeekService}">
         <h3 th:text="${usdLastWeekService.getUsdLastWeek().getCurrencyShortCode()}"></h3>
-
         <p th:text="'Date'+'  /  ' +'price'"></p>
         <p th:text="${usdLastWeekService.getUsdLastWeek().getRates().get(0).getLocalDate()}+' : '
         +${usdLastWeekService.getUsdLastWeek().getRates().get(0).getBid()}+' pln'"></p>
@@ -26,9 +23,6 @@
         +${usdLastWeekService.getUsdLastWeek().getRates().get(5).getBid()}+' pln'"></p>
         <p th:text="${usdLastWeekService.getUsdLastWeek().getRates().get(6).getLocalDate()}+' : '
         +${usdLastWeekService.getUsdLastWeek().getRates().get(6).getBid()}+' pln'"></p>
-
     </div>
-
-
 </body>
 </html>
